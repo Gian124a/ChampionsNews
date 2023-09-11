@@ -427,6 +427,7 @@ footer{
     background-color: var(--FondoHeader);
     position: absolute;
     width: 100%;
+    min-width: 375px;
     top: 1000px;
     display: grid;
     grid-template-columns: 30% 40% 30%;
