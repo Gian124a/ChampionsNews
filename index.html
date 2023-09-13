@@ -38,7 +38,7 @@
             </ul>
         </div>
         <a href="#" class="Contenedor-Titulo">
-            <img src="news champions.png" alt="">
+            <img src="imagenes/news champions.png" alt="">
             <h1>ChampionsNews</h1>
         </a>
         <nav class="Contenedor-Menu nav" id="nav">
@@ -61,17 +61,17 @@
         </div>
         <div class="Opcion-Perfil">
             <div class="Opciones">
-                <div><span class="material-symbols-outlined">person</span></div>
-                <div><span class="material-symbols-outlined">perm_contact_calendar</span></div>
-                <div><span class="material-symbols-outlined">settings</span></div>
-                <div><span class="material-symbols-outlined">settings</span></div>
+                <div onclick="Opciones()"><span class="material-symbols-outlined">person</span></div>
+                <div onclick="Opciones2()"><span class="material-symbols-outlined">perm_contact_calendar</span></div>
+                <div onclick="Opciones3()"><span class="material-symbols-outlined">settings</span></div>
+                <div></div>
             </div>
         </div>
         <div class="Contenido-Perfil">
-            <div class="Perfil">
+            <div class="Perfil" id="Perfil-Datos">
                 <div class="Contenedor-Imagen">
                     <div class="Imagen">
-                        <img src="yo.jpg" alt="">
+                        <img src="imagenes/yo.jpg" alt="">
                     </div>
                 </div>
                 
@@ -110,25 +110,133 @@
                     </div>
                 </div>
             </div>
+
+            <form action="" class="Contenedor-Ajustes" id="Ajustes">
+                <div class="Contenedor-Inputs">
+                    <div class="Contenedor-IL">
+                        <input type="text">
+                        <label for="">Nombre</label>
+                    </div>
+                </div>
+                <div class="Contenedor-Inputs">
+                    <div class="Contenedor-IL">
+                        <input type="text">
+                        <label for="">Apellido</label>
+                    </div>
+                </div>
+                <div class="Contenedor-Inputs">
+                    <div class="Contenedor-IL">
+                        <input type="text">
+                        <label for="">Cedula</label>
+                    </div>
+                </div>
+                <div class="Contenedor-Inputs">
+                    <div class="Contenedor-IL">
+                        <input type="text">
+                        <label for="">Telefono</label>
+                    </div>
+                </div>
+                <div class="Contenedor-Inputs">
+                    <div class="Contenedor-IL">
+                        <input type="text">
+                        <label for="">Edad</label>
+                    </div>
+                </div>
+                <div class="Contenedor-Inputs">
+                    <div class="Contenedor-IL">
+                        <input type="text">
+                        <label for="">Usuario</label>
+                    </div>
+                </div>
+                <div class="Contenedor-Inputs">
+                    <div class="Contenedor-IL">
+                        <input type="text">
+                        <label for="">Email</label>
+                    </div>
+                </div>
+                <div class="Contenedor-Inputs">
+                    <div class="Contenedor-IL">
+                        <input type="text">
+                        <label for="">Password</label>
+                    </div>
+                    <div class="Cambio-Password">
+                        <a href="#"><p>Deseas Cambiar tu Password?</p></a>
+                    </div>
+                </div>
+                <div class="Contenedor-Boton">
+                    <input type="submit" value="Confirmar Cambio">
+                </div>
+            </form>
+            <div class="Configuracion" id="Confi">
+                <div class="Configuraciones">
+                    <div class="Opcion-Texto">
+                        <h4>Fondo Oscuro / Claro</h4>
+                        <p>Para definir el fondo claro o Oscuro</p>
+                    </div>
+                    <div class="Boton-Active">
+                        <div id="Botoncito">
+                            <button id="Buttoncito" onclick="Botoncito()"></button>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="Configuraciones">
+                    <div class="Opcion-Texto">
+                        <h4>Notificaciones</h4>
+                        <p>Te llegaran noticias de los Lideres de ChampionsNews</p>
+                    </div>
+                    <div class="Boton-Active">
+                        <div id="Botoncito">
+                            <button id="Buttoncito" onclick="Botoncito()"></button>
+                        </div>
+                    </div>           
+                </div>
+                <div class="Configuraciones">
+                    <div class="Opcion-Texto">
+                        <h4>Subscripciones</h4>
+                        <p>Te llegaran publicaciones de la gente a la cual estas subscrita </p>
+                    </div>
+                    <div class="Boton-Active">
+                        <div id="Botoncito">
+                            <button id="Buttoncito" onclick="Botoncito()"></button>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="Configuraciones">
+                    <div class="Opcion-Texto">
+                        <h4>Menciones</h4>
+                        <p>Prodras ver quien te menciona</p>
+                    </div>
+                    <div class="Boton-Active">
+                        <div id="Botoncito">
+                            <button id="Buttoncito" onclick="Botoncito()"></button>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="Configuraciones">
+                    <div class="Opcion-Texto">
+                        <h4>Contenido Compartido</h4>
+                        <p>Prodras ver la gente que comparte tus publicaciones</p>
+                    </div>
+                    <div class="Boton-Active">
+                        <div id="Botoncito">
+                            <button id="Buttoncito" onclick="Botoncito()"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="Configuraciones">
+                    <div class="Opcion-Texto">
+                        <h4>Idioma</h4>
+                        <p>Para definir el idioma que quieres que este la pagina</p>
+                    </div>
+                    <div class="Boton-Active">
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <footer>
         <div class="Footer-Redes">
             <div class="Titulo">
@@ -142,7 +250,7 @@
             </ul>
         </div>
         <div class="Footer-Titulo">
-            <img src="news champions.png" alt="">
+            <img src="imagenes/news champions.png" alt="">
             <h1>ChampionsNews</h1>
         </div>
         <div class="Footer-Opciones">
@@ -157,13 +265,13 @@
             </ul>
         </div>
         <div class="Patrocineos">
-            <img src="pepsi.png" alt="" id="Pepsi">
-            <img src="adidas.png" alt="">
-            <img src="fifa.png" alt="">
-            <img src="logo-Mastercard.png" alt="">
-            <img src="sony.png" alt="">
-            <img src="Logo-lays.png" alt="">
-            <img src="nissan.png" alt="">
+            <img src="imagenes/pepsi.png" alt="" id="Pepsi">
+            <img src="imagenes/adidas.png" alt="">
+            <img src="imagenes/fifa.png" alt="">
+            <img src="imagenes/logo-Mastercard.png" alt="">
+            <img src="imagenes/sony.png" alt="">
+            <img src="imagenes/Logo-lays.png" alt="">
+            <img src="imagenes/nissan.png" alt="">
         </div>
         <div class="Derechos">
             <p>Derechos reservados por Gianfranco</p>
