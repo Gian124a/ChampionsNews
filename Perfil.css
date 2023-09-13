@@ -1,11 +1,11 @@
 :root{
     --TipografiaTitulo : 'Oswald', sans-serif;
     --TipografiaSecundaria: 'Ubuntu', sans-serif;
-    --TipografiaGeneral: ;
+    --TipografiaGeneral: 'Belanosima', sans-serif;
     --FondoHeader: #0E0E1A;
     --FondoBody: #20203D;
     --ColorAzul: #200778;
-    --ColorAzulClaro: #1857CC;
+    --ColorAzulClaro: #2969FF;
     --ColorVioleta: #E800B4;
 }
 *{
@@ -84,7 +84,7 @@ header{
 .Contenedor-Menu{
     position: absolute;
     top: 110px;
-    width: 200px;
+    width: 170px;
     height: 252px;
     background-color: var(--FondoHeader);
 }
@@ -254,6 +254,7 @@ nav{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 50px 80px 400px;
+    
 }
 .Contenedor-Perfil::before{
     content: '';
@@ -315,6 +316,9 @@ nav{
 }
 .Contenido-Perfil{
     position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: scroll;
 }
 .Perfil{
     position: absolute;
@@ -366,10 +370,15 @@ nav{
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    margin: 0 10px;
+    margin: 0 10px 10px 0;
 }
-.Contenedor-Info h3, .Contenedor-Info p{
-    font-family: var(--TipografiaSecundaria);
+.Contenedor-Info h3{
+    font-family: var(--TipografiaGeneral);
+    font-size: 25px;
+    color: #FFFFFF;
+}
+.Contenedor-Info p{
+    font-family: var(--TipografiaGeneral);
     color: #FFFFFF;
 }
 .Descripcion{
@@ -407,10 +416,6 @@ nav{
     font-weight: 600;
     color: #FFFFFF;
 }
-
-
-
-
 footer{
     background-color: var(--FondoHeader);
     position: absolute;
@@ -502,6 +507,219 @@ footer{
     align-items: center;
 }
 
+
+
+
+
+.Contenedor-Ajustes{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding-top: 15px;
+    background-color: var(--FondoHeader);
+    width: 300px;
+    height: 670px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 55px) 80px 80px;
+    row-gap: 12px;
+    overflow: scroll;
+    display: none;
+}
+.Contenedor-Inputs{
+    position: relative;
+}
+.Contenedor-IL:not(.Contenedor-Inputs:nth-child(8) .Contenedor-IL){
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.Contenedor-IL input{
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    height: 80%;
+    padding: 5px 15px 0 15px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 4px solid var(--ColorAzulClaro);
+    color: white;
+}
+.Contenedor-IL:not(.Contenedor-Inputs:nth-child(8) .Contenedor-IL) label{
+    position: absolute;
+    left: 43px;
+    top: 24px;
+    font-family: var(--TipografiaGeneral);
+    color: gray;
+    pointer-events: none;
+    transition: .5s;
+}
+.Contenedor-IL:not(.Contenedor-Inputs:nth-child(8) .Contenedor-IL) input:focus~label, .Contenedor-Inputs:nth-child(8) .Contenedor-IL input:focus~label{
+    top: 0;
+    color: var(--ColorAzulClaro);
+    transition: .5s;
+}
+.Contenedor-Inputs:nth-child(8){
+    height: 100%;
+}
+.Contenedor-Inputs:nth-child(8) .Contenedor-IL{
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+}
+.Contenedor-Inputs:nth-child(8) .Contenedor-IL label{
+    position: absolute;
+    left: 43px;
+    top: 24px;
+    font-family: var(--TipografiaGeneral);
+    color: gray;
+    pointer-events: none;
+    transition: .5s;
+}
+.Cambio-Password
+{
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    display: flex;
+    justify-content: start;
+    padding-left: 30px;
+    align-items: end;
+    font-family: var(--TipografiaSecundaria);
+    font-weight: 600;
+    font-size: 15px;
+    color: #1857CC;
+}
+.Cambio-Password a{
+    color: #1857CC;
+    transition: .5s;
+}
+.Cambio-Password a:hover{
+    text-decoration: underline;
+    color: var(--ColorAzul);
+    cursor: pointer;
+    transition: .5s;
+}
+.Contenedor-Boton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Contenedor-Boton input{
+    padding: 16px 32px;
+    background-color: transparent;
+    outline: none;
+    font-family: var(--TipografiaSecundaria);
+    font-weight: 600;
+    font-size: 17px;
+    color: #FFFFFF;
+    border: 4px solid var(--ColorAzulClaro);
+    cursor: pointer;
+    transition: .5s;
+}
+.Contenedor-Boton input:hover{
+    position: relative;
+    background-color: var(--FondoBody);
+    border-color: var(--ColorAzul);
+    transition: .5s;
+}
+@media (min-width: 1110px) {
+    .Contenedor-Ajustes{
+        padding: 20px;
+        width: 700px;
+        height: 400px;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: repeat(4, 55px) 60px;
+    }
+    .Contenedor-Inputs:nth-child(8) .Contenedor-IL{
+        
+        height: 100%;
+    }
+    .Cambio-Password{
+        position: relative;
+        top: 60px;
+    }
+    .Contenedor-Boton{
+        position: absolute;
+        bottom: 25px;
+        left: 243.5px;
+    }
+}
+
+.Configuracion{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 16.6%);
+    display: none;
+}
+.Configuraciones{
+    position: relative;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 100%;
+}
+.Opcion-Texto{
+    padding: 10px;
+}
+.Opcion-Texto h4{
+    font-family: var(--TipografiaSecundaria);
+    font-weight: 600;
+    color: #2969FF;
+    margin-bottom: 5px;
+}
+.Opcion-Texto p{
+    font-size: 13px;
+    color: rgb(176, 185, 193);
+    font-family: 'Belanosima', sans-serif;
+}
+.Boton-Active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Botoncito{
+    position: relative;
+    width: 60px;
+    height: 30px;
+    border-radius: 160px;
+    background: #222;
+    transition: .5s;
+    box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
+                inset 0 8px 8px rgba(0, 0, 0, 0.1),
+                inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+}
+#Botoncito.Active{
+    background-color: #FFFFFF;
+}
+#Botoncito button{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background:  #2969FF;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: scale(0.9);
+    transition: .5s;
+}
+#buttoncito.Active{
+    left: 40px;
+    background: #2969FF;
+    transition: .5s;
+}
 
 
 
